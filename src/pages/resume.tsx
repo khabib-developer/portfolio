@@ -25,7 +25,7 @@ export const Resume = () => {
       </PageSection>
       <br />
       <br />
-      <Footer goto="/">Go Back Home?</Footer>
+      <Footer goto="/portfolio">Go Back Home?</Footer>
     </>
   );
 };

@@ -20,7 +20,7 @@ const Navbar = () => {
       <Header>
         <nav className="navbar navbar-expand-lg bg-light navbar-light">
           <div className="container justify-content-between">
-            <Link to="/" id="cardHover" className="logo nav-link px-0">
+            <Link to="/portfolio" id="cardHover" className="logo nav-link px-0">
               CV
             </Link>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
                   } `}
                 >
                   <Link
-                    to="/"
+                    to="/portfolio"
                     title="Home"
                     className={"nav-link"}
                     id={"cardHover"}
