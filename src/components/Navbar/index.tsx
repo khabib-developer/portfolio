@@ -1,7 +1,7 @@
 /* eslint-disable react/button-has-type */
 import React, { useEffect, useState } from "react";
 import { Header } from "../Layout/style";
-import { Logo, Moon, Icon } from "../Icons";
+import { Icon } from "../Icons";
 import { Link, useLocation } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux-hooks";
 import { setTheme } from "../../store/reducers/themeReducer";
@@ -34,7 +34,9 @@ const Navbar = () => {
             </button>
 
             <div
-              className={`collapse navbar-collapse ${show ? "show" : ""}`}
+              className={`collapse navbar-collapse justify-content-end ${
+                show ? "show" : ""
+              }`}
               id="collapsibleNavbar"
             >
               <div
@@ -47,7 +49,7 @@ const Navbar = () => {
               <ul className="navbar-nav ml-auto">
                 <li
                   className={`nav-item hover__bottom  ${
-                    location.pathname !== "/" ? "d-block" : "d-none"
+                    location.pathname !== "/portfolio" ? "d-block" : "d-none"
                   } `}
                 >
                   <Link
@@ -59,20 +61,7 @@ const Navbar = () => {
                     Home
                   </Link>
                 </li>
-                <li
-                  className={`nav-item hover__bottom  ${
-                    location.pathname !== "/skills" ? "d-block" : "d-none"
-                  } `}
-                >
-                  <Link
-                    to="/skills"
-                    title="Home"
-                    className={"nav-link"}
-                    id={"cardHover"}
-                  >
-                    Skills
-                  </Link>
-                </li>
+
                 <li
                   className={`nav-item hover__bottom  ${
                     location.pathname !== "/projects" ? "d-block" : "d-none"

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { MansoryItem } from "../components/Mansory";
+import { projects } from "../constants";
 
 export const Projects = () => {
   return (
@@ -10,46 +11,19 @@ export const Projects = () => {
         <div>
           <h1 className="intro__text">Projects.</h1> <br />
           <Layout>
-            <MansoryItem
-              item={{
-                src: process.env.PUBLIC_URL + "/img/alzargar.png",
-                placeholderSrc:
-                  "https://media.giphy.com/media/xTkcEQACH24SMPxIQg/giphy.gif",
-                title: "Alzargar",
-                description: "Site directory",
-                skills: ["Expressjs", "Reactjs", "typescript", "MySql"],
-              }}
-            />
-            <MansoryItem
-              item={{
-                src: process.env.PUBLIC_URL + "/img/surdik.png",
-                placeholderSrc:
-                  "https://media.giphy.com/media/xTkcEQACH24SMPxIQg/giphy.gif",
-                title: "Surdik uz",
-                description: "Website for booking tickets",
-                skills: ["Javascript", "Expressjs", "MySql"],
-              }}
-            />
-            <MansoryItem
-              item={{
-                src: process.env.PUBLIC_URL + "/img/smartinvest.png",
-                placeholderSrc:
-                  "https://media.giphy.com/media/xTkcEQACH24SMPxIQg/giphy.gif",
-                title: "smartinvestdubai.ru",
-                description: "Landing Page",
-                skills: ["Javascript"],
-              }}
-            />
-            <MansoryItem
-              item={{
-                src: process.env.PUBLIC_URL + "/img/360-air.png",
-                placeholderSrc:
-                  "https://media.giphy.com/media/xTkcEQACH24SMPxIQg/giphy.gif",
-                title: "360-air.ru",
-                description: "Landing Page",
-                skills: ["Javascript"],
-              }}
-            />
+            {projects.map((project) => (
+              <a
+                href={`${!project.link ? "" : project.link}`}
+                target={`${!project.link ? "" : "_blank"}`}
+                rel="noreferrer"
+              >
+                <MansoryItem
+                  item={{
+                    ...project,
+                  }}
+                />
+              </a>
+            ))}
           </Layout>
         </div>
       </PageSection>

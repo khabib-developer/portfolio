@@ -1,5 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
-import { About } from "../pages/about";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { Home } from "../pages/home";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Layout } from "../components/Layout";
@@ -14,9 +13,9 @@ export const Pages = () => {
         <CSSTransition classNames="fade" timeout={500} key={location.key}>
           <Routes>
             <Route path="/portfolio" element={<Home />} />
-            <Route path="/skills" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<Navigate replace to="/portfolio" />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>

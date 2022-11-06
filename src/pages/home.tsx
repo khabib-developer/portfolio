@@ -17,7 +17,7 @@ export const Home = () => {
         </p>
       </article>
       <br />
-      <Footer goto="/skills">See About My Skills</Footer>
+      <Footer goto="/projects">See my projects</Footer>
       <br />
     </PageSection>
   );
