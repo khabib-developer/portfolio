@@ -66,3 +66,8 @@ a * {
 
   user-select: none;
 }
+
+.text {
+  color: #fff;
+  padding-bottom: 20px;
+}

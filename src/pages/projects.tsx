@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { MansoryItem } from "../components/Mansory";
@@ -29,6 +28,8 @@ export const Projects = () => {
       </PageSection>
 
       <div>
+        <div className="text">And some other landing pages</div>
+
         <Footer goto="/resume">Lets Go To My Resume.</Footer>
         <br />
       </div>
@@ -42,6 +43,7 @@ export const PageSection = styled.div`
     margin: 4rem 0rem 1.5rem;
     position: relative;
   }
+
   button {
     font-size: calc(var(--font-sm) + 1.5px);
     background: var(--mark);

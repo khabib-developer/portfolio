@@ -10,10 +10,10 @@ export const Home = () => {
         <p>
           I am a self-taught web developer with a strong eye for new
           technologies and a deep understanding of techniques. I have experience
-          with React/Typescript Expressjs. Now I am improving my skills in this
-          direction and expanding them with new technologies. I also have an
-          interest in learning C# or C++. In my free time I improve my English.
-          Open for your suggestion.
+          with React/Typescript Expressjs Nestjs. As I continually expand my
+          skill set, I am actively learning about Web3.0. Now I am improving my
+          skills in this direction and expanding them with new technologies. In
+          my free time I improve my English. Open for your suggestion.
         </p>
       </article>
       <br />
