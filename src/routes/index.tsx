@@ -12,10 +12,10 @@ export const Pages = () => {
       <TransitionGroup component={null}>
         <CSSTransition classNames="fade" timeout={500} key={location.key}>
           <Routes>
-            <Route path="/portfolio" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/resume" element={<Resume />} />
-            <Route path="*" element={<Navigate replace to="/portfolio" />} />
+            <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
