@@ -12,7 +12,7 @@ function App() {
     const color = !theme ? "#fff" : "#000";
     const bgColor = !theme ? "rgba(0,0,0, 0.25)" : "#fffff040";
     renderCanvas(color, bgColor, !matches);
-  }, [theme]);
+  }, [matches, theme]);
   return (
     <>
       <Background color={!theme ? "#fff" : "#000"}>
